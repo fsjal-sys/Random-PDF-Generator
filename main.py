@@ -18,7 +18,7 @@ def generate_pdf(limit):
         for title in soup.find_all("title"):
             pdf_title = title.get_text()
 
-        pdfkit.from_url(URL, f"Articles/{pdf_title.replace('Wikipedia','')}.pdf")
+        pdfkit.from_url(URL, f"Articles/{pdf_title.replace('- Wikipedia','')}.pdf")
 
         print(f"Generated {count} articles.")
         count += 1
